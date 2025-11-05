@@ -1,0 +1,4 @@
+@EndUserText.label: 'Event Management Service'
+define service ZUI_EVENT_MGMT {
+  expose ZR_EVENT as Event;
+}

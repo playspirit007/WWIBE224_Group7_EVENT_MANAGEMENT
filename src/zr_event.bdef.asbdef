@@ -1,0 +1,71 @@
+managed implementation in class zbp_r_event unique;
+strict ( 2 );
+
+define behavior for ZR_EVENT alias Event
+persistent table zevent_a
+lock master
+authorization master ( global )
+{
+  // Standard Operations
+  create;
+  update;
+  delete;
+
+  // Composition Association
+  association _Registrations { create; }
+
+  // Field Properties
+  field ( readonly, numbering : managed ) EventUuid;
+  field ( readonly ) EventId, CreatedBy, CreatedAt, LastChangedBy, LastChangedAt;
+  field ( mandatory ) Title, Location, StartDate, EndDate, MaxParticipants, Description;
+
+  mapping for zevent_a corresponding
+  {
+    EventUuid = event_uuid;
+    EventId = event_id;
+    Title = title;
+    Location = location;
+    StartDate = start_date;
+    EndDate = end_date;
+    MaxParticipants = max_participants;
+    Status = status;
+    Description = description;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}
+
+define behavior for ZR_REGISTRATION alias Registration
+persistent table zregistration_a
+lock dependent by _Event
+authorization dependent by _Event
+{
+  // Standard Operations
+  update;
+  delete;
+
+  // To-parent association
+  association _Event;
+
+  // Field Properties
+  field ( readonly, numbering : managed ) RegistrationUuid;
+  field ( readonly ) RegistrationId, CreatedBy, CreatedAt, LastChangedBy, LastChangedAt;
+  field ( readonly ) EventUuid;
+  field ( mandatory ) ParticipantUuid;
+
+  mapping for zregistration_a corresponding
+  {
+    RegistrationUuid = registration_uuid;
+    RegistrationId = registration_id;
+    EventUuid = event_uuid;
+    ParticipantUuid = participant_uuid;
+    Status = status;
+    Remarks = remarks;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}
