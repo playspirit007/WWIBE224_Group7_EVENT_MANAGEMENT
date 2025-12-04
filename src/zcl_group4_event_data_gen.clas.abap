@@ -42,36 +42,36 @@ CLASS zcl_group4_event_data_gen IMPLEMENTATION.
     " CREATE 8 CONCERT EVENTS
     "===============================================================
     DATA(concert_titles) = VALUE stringtab(
-      ( |Rock am Ring| )
-      ( |Pop Night Berlin| )
-      ( |Classic Open Air| )
-      ( |EDM Festival Cologne| )
-      ( |Jazz Evening Hamburg| )
-      ( |Metal Storm Stuttgart| )
-      ( |Symphonic Night Munich| )
-      ( |Indie Summer Festival| )
+      ( |Berlin Open Air| )
+      ( |Kölner Lichter| )
+      ( |Wacken Open Air| )
+      ( |Oktoberfest| )
+      ( |Leipziger Buchmesse| )
+      ( |Berlinale| )
+      ( |Stuttgart Weindorf| )
+      ( |Fusion Festival| )
     ).
 
     DATA(concert_locations) = VALUE stringtab(
-          ( |Nürburgring| )
           ( |Berlin| )
-          ( |Dresden| )
           ( |Köln| )
-          ( |Hamburg| )
-          ( |Stuttgart| )
+          ( |Wacken| )
           ( |München| )
           ( |Leipzig| )
+          ( |Berlin| )
+          ( |Stuttgart| )
+          ( |Lärz| )
         ).
 
     DATA(concert_desc) = VALUE stringtab(
-          ( |Großes Rockfestival mit internationalen Bands.| )
-          ( |Pop-Open-Air-Konzert mit Top-Acts.| )
-          ( |Klassik-Konzert unter freiem Himmel.| )
-          ( |Elektronische Musik mit internationalen DJs.| )
-          ( |Jazz-Konzerte in gemütlicher Atmosphäre.| )
-          ( |Metal-Festival mit mehreren Bühnen.| )
-          ( |Symphonisches Konzert mit Orchester.| )
-          ( |Indie-Festival mit Newcomer-Bands.| )
+          ( |Tempelhofer Feld Elektronische Musikfestival im ehemaligen Flughafen.| )
+          ( |Rheinpromenade Großes Feuerwerk und Musik am Rhein.| )
+          ( |Schleswig-Holstein Weltgrößtes Heavy-Metal-Festival.| )
+          ( |Theresienwiese Traditionelles Volksfest mit Bierzelten und Fahrgeschäften.| )
+          ( |Messe Leipzig Bedeutende Buch- und Medienmesse.| )
+          ( |Potsdamer Platz Internationales Filmfestival.| )
+          ( |Marktplatz Weinfest mit regionalen Weinen und Essen.| )
+          ( |Flugplatz Alternative Musik- und Kunstfestival.| )
         ).
 
 
