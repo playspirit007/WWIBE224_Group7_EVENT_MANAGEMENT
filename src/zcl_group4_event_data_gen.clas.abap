@@ -115,13 +115,13 @@ CLASS zcl_group4_event_data_gen IMPLEMENTATION.
     " CREATE 8 PARTICIPANTS
     "===============================================================
     DATA(first_names) = VALUE stringtab(
-      ( |Anna| ) ( |Markus| ) ( |Julia| ) ( |Tobias| )
-      ( |Laura| ) ( |Sven| ) ( |Elena| ) ( |Jonas| )
+      ( |Elias| ) ( |Dilara| ) ( |Joshua| ) ( |Jonas| )
+      ( |Leonard| ) ( |Peter| ) ( |Felix| ) ( |Sara| )
     ).
 
     DATA(last_names) = VALUE stringtab(
-      ( |Schmidt| ) ( |Keller| ) ( |Neumann| ) ( |Hoffmann| )
-      ( |Bauer| ) ( |Krüger| ) ( |Brandt| ) ( |Wagner| )
+      ( |Schwarzmann| ) ( |Maier| ) ( |Weber| ) ( |Maeschle| )
+      ( |Friedmann| ) ( |Schmid| ) ( |Beurer| ) ( |Vogt| )
     ).
 
 
