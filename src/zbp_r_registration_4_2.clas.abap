@@ -1,5 +1,0 @@
-CLASS zbp_r_registration_4_2 DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zr_registration_4_2.
-ENDCLASS.
-
-CLASS zbp_r_registration_4_2 IMPLEMENTATION.
-ENDCLASS.
